@@ -28,7 +28,7 @@ def main():
     html_header = """
 <p align="center">
 <a href="https://dataloop.ai/" target="_blank" rel="noreferrer noopener">
-<img width="700" src="https://github.com/dataloop-ai-joint-dev/.github/blob/main/logo.png"></a>
+<img width="700" src="https://github.com/dataloop-ai-joint-dev/.github/blob/master/logo.png"></a>
 </p>
 
 <div align="center">
