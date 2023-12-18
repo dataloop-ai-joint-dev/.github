@@ -12,7 +12,8 @@ def main():
 
     combined_readme_content = ""
     go_to_top = "\n \n[Go To Top](#solution-engineering-catalog)"
-    for repo in org.get_repos():
+    repos = sorted(org.get_repos(), key=lambda x: x.name)
+    for repo in repos:
         try:
             if repo.name.endswith("-dataloop".lower()):
                 continue
