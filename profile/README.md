@@ -30,6 +30,10 @@
 
 * [consensus-segmentation](#consensus-segmentation)
 
+* [dockerized-server](#dockerized-server)
+
+* [annotations-stitching](#annotations-stitching)
+
 
 ---
 
@@ -131,8 +135,6 @@ Please reach out to your Dataloop Customer Success manager to get the applicatio
 # consensus-segmentation
 Visibility: Private
 ### Description:
-![pipeline.png](assets%2Fpipeline.png)
-
 A pipeline to support consensus task with segmentation annotations.
 The pipeline uses Majority Vote logic on each pixel on the image, and determine the pixel label on the original image 
 as follows:
@@ -151,6 +153,54 @@ Please reach out to your Dataloop Customer Success manager to get the applicatio
 ### Technology
 * Python
 * Dataloop FaaS and Pipeline
+
+ 
+[Go To Top](#solution-engineering-catalog)
+---
+
+# dockerized-server
+Visibility: Public
+### Description:
+A Docker with API server that receives image as an input, send it to a model for prediction, and sends the model 
+results in json format.
+
+**Notice:** Make sure to update the requested `host` and `port` in the file: `Dockerfile` inside the repository, 
+before building the docker image: 
+1. `EXPOSE 9000` - (line 14)
+2. `CMD ["python", "app.py", "--host=0.0.0.0", "--port=9000"]` - (line 17)
+
+### Install the Application
+See the sections: `Prerequisite`, `How to Run Locally` and `How to Run Remotely` in the `README.md` file of this 
+repository.
+
+### Technology
+* Python
+* FastAPI
+* Docker
+
+ 
+[Go To Top](#solution-engineering-catalog)
+---
+
+# annotations-stitching
+Visibility: Private
+### Description:
+This solution is a FAAS that supports 3 modes of annotations stitching from a group of segments to one main item. \
+The 3 available modes are:
+1. **AudiosToAudio** - Connect the annotations from the Audio segments, and upload them to the main Audio item.
+   > ⚠️ **Warning:** This mode uses the annotations' description to add notes on stitching conflicts 
+   (For more information about `AudiosToAudio` notes, see: [AudiosToAudio Mode Class](#Mode-Classes-Flow-Explanation)).
+2. **ImagesToVideo** - Connect the annotations from the Image segments (Video frames), and upload them to the main Video item.
+3. **VideosToVideo** - Connect the annotations from the Video segments, and upload them to the main Video item. 
+
+### Install the Application
+Please reach out to your Dataloop Customer Success manager to get the application installed in your project.
+
+### Technology
+* Python
+* FastAPI
+* Docker
+
  
 [Go To Top](#solution-engineering-catalog)
 ---
