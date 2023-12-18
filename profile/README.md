@@ -18,23 +18,62 @@
 ---
 ## Available Solutions:
 
+* [annotations-stitching](#annotations-stitching)
+
+* [annotators-qualification-app](#annotators-qualification-app)
+
 * [annotators-qualification-custom-metrics](#annotators-qualification-custom-metrics)
 
 * [batch-management-app](#batch-management-app)
 
-* [annotators-qualification-app](#annotators-qualification-app)
+* [consensus-segmentation](#consensus-segmentation)
 
 * [dataset-and-driver-creator-app](#dataset-and-driver-creator-app)
 
-* [dynamic-tasks-app](#dynamic-tasks-app)
-
-* [consensus-segmentation](#consensus-segmentation)
-
 * [dockerized-server](#dockerized-server)
 
-* [annotations-stitching](#annotations-stitching)
+* [dynamic-tasks-app](#dynamic-tasks-app)
+
+* [lidar-demo-deployment](#lidar-demo-deployment)
 
 
+---
+
+# annotations-stitching
+Visibility: Private
+### Description:
+This solution is a FAAS that supports 3 modes of annotations stitching from a group of segments to one main item. \
+The 3 available modes are:
+1. **AudiosToAudio** - Connect the annotations from the Audio segments, and upload them to the main Audio item.
+2. **ImagesToVideo** - Connect the annotations from the Image segments (Video frames), and upload them to the main Video item.
+3. **VideosToVideo** - Connect the annotations from the Video segments, and upload them to the main Video item. 
+
+### Install the Application
+Please reach out to your Dataloop Customer Success manager to get the FAAS installed in your project.
+
+### Technology
+* Python
+* Dataloop FaaS and Pipeline
+
+ 
+[Go To Top](#solution-engineering-catalog)
+---
+
+# annotators-qualification-app
+Visibility: Private
+### Description
+Using the application you can manage scores of qualification task and add qualified annotators to tasks
+
+### Install the Application
+Contact your Dataloop customer success manager to get the application installed in your project
+
+### Technology
+* Python
+* App panels based on HTML5 and JS
+* Dataloop FaaS and Pipeline
+
+ 
+[Go To Top](#solution-engineering-catalog)
 ---
 
 # annotators-qualification-custom-metrics
@@ -73,19 +112,27 @@ Please reach out to your Dataloop Customer Success manager to get the applicatio
 [Go To Top](#solution-engineering-catalog)
 ---
 
-# annotators-qualification-app
+# consensus-segmentation
 Visibility: Private
-### Description
-Using the application you can manage scores of qualification task and add qualified annotators to tasks
+### Description:
+A pipeline to support consensus task with segmentation annotations.
+The pipeline uses Majority Vote logic on each pixel on the image, and determine the pixel label on the original image 
+as follows:
+
+1. If for the given threshold, the Majority Vote result on the pixel `PASSES` the threshold: 
+The pixel receives a segmentation annotation with the selected label
+(For a Majority Vote result of `No Annotation`, the pixel will stay `Not Annotated`).
+2. If for the given threshold, the Majority Vote result on the pixel `FAILS` the threshold: 
+The pixel receives a segmentation annotation with the label `disagreement`.
+
+After the checking of the Majority Vote is completed, the resulted mask/s are uploaded to the given upload dataset.
 
 ### Install the Application
-Contact your Dataloop customer success manager to get the application installed in your project
+Please reach out to your Dataloop Customer Success manager to get the application installed in your project.
 
 ### Technology
 * Python
-* App panels based on HTML5 and JS
 * Dataloop FaaS and Pipeline
-
  
 [Go To Top](#solution-engineering-catalog)
 ---
@@ -103,6 +150,25 @@ Contact your Dataloop customer success manager to get the application installed 
 * App panels based on HTML5 and JS
 * Dataloop FaaS
 
+ 
+[Go To Top](#solution-engineering-catalog)
+---
+
+# dockerized-server
+Visibility: Public
+### Description:
+A Docker with API server that receives image as an input, send it to a model for prediction, and sends the model 
+results in json format.
+
+The solution also comes with a tests script that parses the API server results and upload them to the dataloop platform.
+
+### Install the Application
+Follow the instructions under the [repository README file](https://github.com/dataloop-ai-joint-dev/dockerized-server/blob/master/README.md).
+
+### Technology
+* Python
+* FastAPI
+* Docker
  
 [Go To Top](#solution-engineering-catalog)
 ---
@@ -132,65 +198,17 @@ Please reach out to your Dataloop Customer Success manager to get the applicatio
 [Go To Top](#solution-engineering-catalog)
 ---
 
-# consensus-segmentation
+# lidar-demo-deployment
 Visibility: Private
 ### Description:
-A pipeline to support consensus task with segmentation annotations.
-The pipeline uses Majority Vote logic on each pixel on the image, and determine the pixel label on the original image 
-as follows:
-
-1. If for the given threshold, the Majority Vote result on the pixel `PASSES` the threshold: 
-The pixel receives a segmentation annotation with the selected label
-(For a Majority Vote result of `No Annotation`, the pixel will stay `Not Annotated`).
-2. If for the given threshold, the Majority Vote result on the pixel `FAILS` the threshold: 
-The pixel receives a segmentation annotation with the label `disagreement`.
-
-After the checking of the Majority Vote is completed, the resulted mask/s are uploaded to the given upload dataset.
+A solution to prepare Dataloop LiDAR Scene Demo in any new/existing dataset. 
 
 ### Install the Application
-Please reach out to your Dataloop Customer Success manager to get the application installed in your project.
+Please reach out to your Dataloop Customer Success manager to get the dataset installed in your project.
 
 ### Technology
 * Python
-* Dataloop FaaS and Pipeline
- 
-[Go To Top](#solution-engineering-catalog)
----
-
-# dockerized-server
-Visibility: Public
-### Description:
-A Docker with API server that receives image as an input, send it to a model for prediction, and sends the model 
-results in json format.
-
-The solution also comes with a tests script that parses the API server results and upload them to the dataloop platform.
-
-### Install the Application
-Follow the instructions under the [repository README file](https://github.com/dataloop-ai-joint-dev/dockerized-server/blob/master/README.md).
-
-### Technology
-* Python
-* FastAPI
-* Docker
- 
-[Go To Top](#solution-engineering-catalog)
----
-
-# annotations-stitching
-Visibility: Private
-### Description:
-This solution is a FAAS that supports 3 modes of annotations stitching from a group of segments to one main item. \
-The 3 available modes are:
-1. **AudiosToAudio** - Connect the annotations from the Audio segments, and upload them to the main Audio item.
-2. **ImagesToVideo** - Connect the annotations from the Image segments (Video frames), and upload them to the main Video item.
-3. **VideosToVideo** - Connect the annotations from the Video segments, and upload them to the main Video item. 
-
-### Install the Application
-Please reach out to your Dataloop Customer Success manager to get the application installed in your project.
-
-### Technology
-* Python
-* Dataloop FaaS and Pipeline
+* LiDAR
  
 [Go To Top](#solution-engineering-catalog)
 ---
