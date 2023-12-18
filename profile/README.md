@@ -26,6 +26,10 @@
 
 * [dataset-and-driver-creator-app](#dataset-and-driver-creator-app)
 
+* [dynamic-tasks-app](#dynamic-tasks-app)
+
+* [consensus-segmentation](#consensus-segmentation)
+
 
 ---
 
@@ -95,6 +99,58 @@ Contact your Dataloop customer success manager to get the application installed 
 * App panels based on HTML5 and JS
 * Dataloop FaaS
 
+ 
+[Go To Top](#solution-engineering-catalog)
+---
+
+# dynamic-tasks-app
+Visibility: Private
+### Description:
+An application that converts a `Task` to `Dynamic Task` 
+and create pipeline nodes, for managing the task, to an existing inactive pipeline.
+
+**Dynamic Task Explanation:**
+
+A dynamic task, is a task that can hold items from different datasets on the same project.
+The task receives items **only** from its related nodes inside the pipeline and handles the following case:
+1. `Item from the same dataset of the task` - The item enters to the main dynamic task
+2. `Item from a different dataset of the task` - A new dynamic task on the item's dataset gets created as a child task 
+    to the main dynamic task (If there is no existing one) and the item enters to this child dynamic task.
+
+### Install the Application
+Please reach out to your Dataloop Customer Success manager to get the application installed in your project.
+
+### Technology
+* Python
+* App panels based on HTML5 and JS
+* Dataloop FaaS and Pipeline
+ 
+[Go To Top](#solution-engineering-catalog)
+---
+
+# consensus-segmentation
+Visibility: Private
+### Description:
+![pipeline.png](assets%2Fpipeline.png)
+
+A pipeline to support consensus task with segmentation annotations.
+The pipeline uses Majority Vote logic on each pixel on the image, and determine the pixel label on the original image 
+as follows:
+
+1. If for the given threshold, the Majority Vote result on the pixel `PASSES` the threshold: 
+The pixel receives a segmentation annotation with the selected label
+(For a Majority Vote result of `No Annotation`, the pixel will stay `Not Annotated`).
+2. If for the given threshold, the Majority Vote result on the pixel `FAILS` the threshold: 
+The pixel receives a segmentation annotation with the label `disagreement`.
+
+After the checking of the Majority Vote is completed, the resulted mask/s are uploaded to the given upload dataset.
+
+### Install the Application
+Please reach out to your Dataloop Customer Success manager to get the application installed in your project.
+
+### Technology
+* Python
+* Dataloop FaaS and Pipeline
  
 [Go To Top](#solution-engineering-catalog)
 ---
