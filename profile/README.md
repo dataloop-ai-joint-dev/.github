@@ -34,7 +34,11 @@
 
 * [dynamic-tasks-app](#dynamic-tasks-app)
 
+* [lidar-base-parser](#lidar-base-parser)
+
 * [lidar-demo-deployment](#lidar-demo-deployment)
+
+* [lidar-pcds-connector](#lidar-pcds-connector)
 
 
 ---
@@ -198,6 +202,27 @@ Please reach out to your Dataloop Customer Success manager to get the applicatio
 [Go To Top](#solution-engineering-catalog)
 ---
 
+# lidar-base-parser
+Visibility: Private
+### Description:
+A pipeline that do the following things: 
+1. Parses lidar data inside a Dataloop Dataset,
+   and stitches all the files together to create a LiDAR video file (`lidar_parser` node).
+2. Runs `ground detection` model on all the scene frames to enable the ground detection toggle button in the LiDAR video 
+   file (`ground_detection` node).
+
+### Install the Application
+Please reach out to your Dataloop Customer Success manager to get the Pipeline installed in your project.
+
+### Technology
+* Python
+* LiDAR
+* Dataloop FaaS and Pipeline
+
+ 
+[Go To Top](#solution-engineering-catalog)
+---
+
 # lidar-demo-deployment
 Visibility: Private
 ### Description:
@@ -209,6 +234,26 @@ Please reach out to your Dataloop Customer Success manager to get the dataset in
 ### Technology
 * Python
 * LiDAR
+ 
+[Go To Top](#solution-engineering-catalog)
+---
+
+# lidar-pcds-connector
+Visibility: Private
+### Description:
+A pipeline that do the following things: 
+1. Stitches all the PCD files together to create a LiDAR video file (`lidar_parser` node).
+2. Runs `ground detection` model on all the scene frames to enable the ground detection toggle button in the LiDAR video 
+   file (`ground_detection` node).
+
+### Install the Application
+Please reach out to your Dataloop Customer Success manager to get the Pipeline installed in your project.
+
+### Technology
+* Python
+* LiDAR
+* Dataloop FaaS and Pipeline
+
  
 [Go To Top](#solution-engineering-catalog)
 ---
