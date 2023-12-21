@@ -38,7 +38,11 @@
 
 * [lidar-demo-deployment](#lidar-demo-deployment)
 
+* [lidar-osdar-parser](#lidar-osdar-parser)
+
 * [lidar-pcds-connector](#lidar-pcds-connector)
+
+* [sam-predict-faas](#sam-predict-faas)
 
 
 ---
@@ -238,6 +242,24 @@ Please reach out to your Dataloop Customer Success manager to get the dataset in
 [Go To Top](#solution-engineering-catalog)
 ---
 
+# lidar-osdar-parser
+Visibility: Private
+### Description:
+A Custom LiDAR Parser to support conversion of datasets from
+[Open Sensor Data for Rail 2023](https://data.fid-move.de/dataset/osdar23), to the Dataloop Platform.
+
+### Install the Application
+Please reach out to your Dataloop Customer Success manager to get the Pipeline installed in your project.
+
+### Technology
+* Python
+* LiDAR
+* Dataloop FaaS and Pipeline
+
+ 
+[Go To Top](#solution-engineering-catalog)
+---
+
 # lidar-pcds-connector
 Visibility: Private
 ### Description:
@@ -254,6 +276,29 @@ Please reach out to your Dataloop Customer Success manager to get the Pipeline i
 * LiDAR
 * Dataloop FaaS and Pipeline
 
+ 
+[Go To Top](#solution-engineering-catalog)
+---
+
+# sam-predict-faas
+Visibility: Private
+### Description:
+A service that uses the [SAM](https://github.com/facebookresearch/segment-anything.git) model by 
+`Facebook Research` team, with [Weights](https://huggingface.co/spaces/abhishek/StableSAM/blob/main/sam_vit_h_4b8939.pth) 
+from `Hugging Face`.
+
+The service get an image item, and upload to them all the detected segmentation annotations by the SAM model 
+as polygons, with a `default_label` of `car parts`.
+
+> ❕ **Notice:** The Service `default_label` parameter can be changed form `car label` to any label.
+
+### Install the Application
+Please reach out to your Dataloop Customer Success manager to get the FAAS installed in your project.
+
+### Technology
+* Python
+* SAM model by Facebook Research
+* Dataloop FaaS
  
 [Go To Top](#solution-engineering-catalog)
 ---
