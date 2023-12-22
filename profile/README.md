@@ -136,7 +136,7 @@ The pixel receives a segmentation annotation with the label `disagreement`.
 After the checking of the Majority Vote is completed, the resulted mask/s are uploaded to the given upload dataset.
 
 ### Install the Application
-Please reach out to your Dataloop Customer Success manager to get the application installed in your project.
+Please reach out to your Dataloop Customer Success manager to get the Pipeline installed in your project.
 
 ### Technology
 * Python
