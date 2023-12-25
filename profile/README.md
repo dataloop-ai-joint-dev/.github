@@ -44,6 +44,8 @@
 
 * [sam-predict-faas](#sam-predict-faas)
 
+* [video-triming-pipeline](#video-triming-pipeline)
+
 
 ---
 
@@ -290,7 +292,7 @@ from `Hugging Face`.
 The service get an image item, and upload to them all the detected segmentation annotations by the SAM model 
 as polygons, with a `default_label` of `car parts`.
 
-> ❕ **Notice:** The Service `default_label` parameter can be changed form `car label` to any label.
+> **Notice:** The Service `default_label` parameter can be changed form `car parts` to any label.
 
 ### Install the Application
 Please reach out to your Dataloop Customer Success manager to get the FAAS installed in your project.
@@ -299,6 +301,21 @@ Please reach out to your Dataloop Customer Success manager to get the FAAS insta
 * Python
 * SAM model by Facebook Research
 * Dataloop FaaS
+ 
+[Go To Top](#solution-engineering-catalog)
+---
+
+# video-triming-pipeline
+Visibility: Private
+### Description
+Using the solution, you can trim a video file to some webm segments, move it to task (async, many annotators can work on each video), and once all video segments are ready, stitch all annotations to a single JSON file (based on object ID).
+### Install the Application
+Contact your Dataloop customer success manager to get the application installed in your project.
+
+### Technology
+* Python
+* Dataloop FaaS/Pipeline
+
  
 [Go To Top](#solution-engineering-catalog)
 ---
