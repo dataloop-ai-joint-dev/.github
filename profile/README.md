@@ -289,11 +289,12 @@ A service that uses the [SAM](https://github.com/facebookresearch/segment-anythi
 `Facebook Research` team, with [Weights](https://huggingface.co/spaces/abhishek/StableSAM/blob/main/sam_vit_h_4b8939.pth) 
 from `Hugging Face`.
 
-The service get an image item, and upload to them all the detected segmentation annotations by the SAM model 
+The service gets an image item and uploads to them all the detected segmentation annotations by the SAM model 
 as polygons, with a `default_label` of `car parts`.
 
-> **Notice:** The Service `default_label` parameter can be changed form `car parts` to any label.
+> **Notice:** The Service `default_label` parameter can be changed from `car parts` to any label.
 
+An example of a pipeline that uses this solution can be found under [noimos-dataloop repository](https://github.com/dataloop-ai-joint-dev/noimos-dataloop/tree/master/car-parts-pipeline)
 ### Install the Application
 Please reach out to your Dataloop Customer Success manager to get the FAAS installed in your project.
 
@@ -301,6 +302,7 @@ Please reach out to your Dataloop Customer Success manager to get the FAAS insta
 * Python
 * SAM model by Facebook Research
 * Dataloop FaaS
+
  
 [Go To Top](#solution-engineering-catalog)
 ---
