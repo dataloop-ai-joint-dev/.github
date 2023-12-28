@@ -72,10 +72,10 @@ Please reach out to your Dataloop Customer Success manager to get the FAAS insta
 # annotators-qualification-app
 Visibility: Private
 ### Description
-Using the application you can manage scores of qualification task and add qualified annotators to tasks
+Using the application you can manage scores of qualification tasks and add qualified annotators to tasks
 
 ### Install the Application
-Contact your Dataloop customer success manager to get the application installed in your project
+Please reach out to your Dataloop Customer Success manager to get the application installed in your project.
 
 ### Technology
 * Python
@@ -153,7 +153,7 @@ Visibility: Private
 Using the application, you can create a new dataset linked to an existing driver or new driver based on a pre-defined driver template. 
 
 ### Install the Application
-Contact your Dataloop customer success manager to get the application installed in your project.
+Please reach out to your Dataloop Customer Success manager to get the application installed in your project.
 
 ### Technology
 * Python
