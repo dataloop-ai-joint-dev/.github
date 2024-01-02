@@ -72,7 +72,9 @@ Please reach out to your Dataloop Customer Success manager to get the FAAS insta
 # annotators-qualification-app
 Visibility: Private
 ### Description
-Using the application you can manage scores of qualification tasks and add qualified annotators to tasks
+The application lets you create an annotation exam, use the [qualification task](https://dataloop.ai/docs/qualification-honeypot) to perform exams, manage the score results, and add qualified annotators to existing tasks
+
+Using the application, you can manage scores of qualification tasks and add qualified annotators to tasks
 
 ### Install the Application
 Please reach out to your Dataloop Customer Success manager to get the application installed in your project.
