@@ -197,7 +197,7 @@ and create pipeline nodes, for managing the task, to an existing inactive pipeli
 **Dynamic Task Explanation:**
 
 A dynamic task, is a task that can hold items from different datasets on the same project.
-The task receives items **only** from its related nodes inside the pipeline and handles the following case:
+The task receives items **only** from its related nodes inside the pipeline and handles the following basic cases:
 1. `Item from the same dataset of the task` - The item enters to the main dynamic task
 2. `Item from a different dataset of the task` - A new dynamic task on the item's dataset gets created as a child task 
     to the main dynamic task (If there is no existing one) and the item enters to this child dynamic task.
