@@ -28,6 +28,8 @@
 
 * [consensus-segmentation](#consensus-segmentation)
 
+* [cycles-retry](#cycles-retry)
+
 * [dataset-and-driver-creator-app](#dataset-and-driver-creator-app)
 
 * [dockerized-server](#dockerized-server)
@@ -145,6 +147,23 @@ Please reach out to your Dataloop Customer Success manager to get the Pipeline i
 ### Technology
 * Python
 * Dataloop FaaS and Pipeline
+ 
+[Go To Top](#solution-engineering-catalog)
+---
+
+# cycles-retry
+Visibility: Private
+### Description
+The application let you an option adding retry mechanism to the pipelines failed cycles. \
+After configurable retry number, the application will email cycle fails error to a distribution list.
+
+### Install the Application
+Please reach out to your Dataloop Customer Success manager to get the application installed in your project.
+
+### Technology
+* Python
+* Dataloop SDK
+
  
 [Go To Top](#solution-engineering-catalog)
 ---
