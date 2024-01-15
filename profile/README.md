@@ -91,7 +91,7 @@ Please reach out to your Dataloop Customer Success manager to get the applicatio
 ---
 
 # annotators-qualification-custom-metrics
-Visibility: Public
+Visibility: Private
 ### Description
 Use the Custom Metrics service to provide custom calculations of annotation scores for [Dataloop Annotators Qualification App](#annotators-qualification-app).
 
@@ -186,7 +186,7 @@ Please reach out to your Dataloop Customer Success manager to get the applicatio
 ---
 
 # dockerized-server
-Visibility: Public
+Visibility: Private
 ### Description:
 This solution will allow you to perform predict action using dataloop model management without deploying your model into dataloop and using the docker as a proxy server
 
